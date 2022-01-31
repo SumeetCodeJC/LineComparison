@@ -36,9 +36,27 @@ public class LineComparison {
     public static void main(String[] args) {
 
         //Object of LineComaprison Class for Calculating Length of Lines
-        LineComparison LC = new LineComparison();
-        LC.getLinePoint();
-        System.out.println("Length of Lines : "+LC.getLengthOfLine());
+        LineComparison LC1 = new LineComparison();
+        LineComparison LC2 = new LineComparison();
+
+        //Getting Lines input from user
+        LC1.getLinePoint();
+        LC2.getLinePoint();
+
+        //Storing Length of Lines in Local Variables
+        double line1Length = LC1.getLengthOfLine();
+        double line2Length = LC2.getLengthOfLine();
+
+        //Displaying the Length of Lines
+        System.out.println("Length of Line1 : "+line1Length);
+        System.out.println("Length of Line2 : "+line2Length);
+
+        //Checking the Equality of Lines
+        if(line1Length == line2Length) {
+            System.out.println("Length of Line1 and Line2 are Equal");
+        } else {
+            System.out.println("Length of Line1 and Line2 are Not Equal");
+        }
     }
 }
 	
